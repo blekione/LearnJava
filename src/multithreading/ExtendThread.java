@@ -8,6 +8,7 @@ class MyThreadTwo extends Thread {
 	}
 	
 	// Entry point of thread
+	@Override
 	public void run() {
 		System.out.println(getName() + " starting");
 		try {
