@@ -9,14 +9,17 @@ public class MoreThreads {
 		MyThreadImpr mt2 = new MyThreadImpr("Child #2");
 		MyThreadImpr mt3 = new MyThreadImpr("Child #3");
 		
-		do {
-			System.out.println(".");
 			try {
-				Thread.sleep(100);
+				mt1.thrd.join();
+				System.out.println("Child #1 joined");
+				mt2.thrd.join();
+				System.out.println("Child #2 joined");
+				mt3.thrd.join();
+				System.out.println("Child #3 joined");
 			} catch (InterruptedException exc) {
 				System.out.println("Main thread interrupted");
 			}
-		} while (mt1.thrd.isAlive() || mt2.thrd.isAlive() || mt3.thrd.isAlive())
+		
 		System.out.println("Main thread ending.");
 	}
 
