@@ -5,7 +5,7 @@ package multithreading;
 class SumArray {
 	private int sum;
 	
-	synchronized int sumArray(int nums[]) {
+	int sumArray(int nums[]) {
 		sum = 0;
 		
 		for (int i = 0; i < nums.length; i++) {
@@ -39,8 +39,9 @@ class MySumThread implements Runnable {
 	public void run() {
 		
 		System.out.println(thrd.getName() + " starting.");
-		
-		answer = sa.sumArray(a);
+		synchronized(sa) {
+			answer = sa.sumArray(a);
+		}
 		System.out.println("Sum for " + thrd.getName() + " is " + answer);
 		
 		System.out.println(thrd.getName() + " terminating.");	
