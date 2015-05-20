@@ -1,10 +1,5 @@
 package enumerations;
 
-// An enumeration of Transport varieties
-enum Transport {
-	CAR, TRUCK, AIRPLANE, TRAIN, BOAT
-}
-
 public class EnumDemo {
 
 	public static void main(String[] args) {
