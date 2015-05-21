@@ -19,4 +19,13 @@ class NumericFns<T extends Number> {
 	double fraction() {
 		return num.doubleValue() - num.intValue();
 	}
+	
+	
+	// Determine if the absolute values of two objects are the same
+	boolean absEqual(NumericFns<?> ob) {
+		if (Math.abs(num.doubleValue()) == Math.abs(ob.num.doubleValue()))
+			return true;
+		return false;
+	}
+
 }
