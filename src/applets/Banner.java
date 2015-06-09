@@ -53,5 +53,6 @@ public class Banner extends Applet implements Runnable{
 		msg = msg.substring(1, msg.length());
 		msg += ch;
 		g.drawString(msg, 50, 30);
+		showStatus("This is mesagge in status window.");
 	}
 }
