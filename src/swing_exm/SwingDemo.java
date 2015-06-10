@@ -1,6 +1,8 @@
 // A simple Swing program
 package swing_exm;
 
+import java.awt.BorderLayout;
+
 import javax.swing.*;
 
 public class SwingDemo {
@@ -20,7 +22,7 @@ public class SwingDemo {
 		JLabel jlab = new JLabel(" Swing defines the modern Java GUI");
 		
 		// add the label to the content pane
-		jfrm.add(jlab);
+		jfrm.add(jlab, BorderLayout.SOUTH);
 		
 		// display the frame
 		jfrm.setVisible(true);
