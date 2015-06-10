@@ -1,6 +1,6 @@
 // Pass parameter to an applet
 
-//package applets;
+package applets;
 
 import java.applet.*;
 import java.awt.*;
