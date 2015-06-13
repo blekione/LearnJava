@@ -56,15 +56,16 @@ public class TFDemo implements ActionListener {
 		if (ae.getActionCommand().equals("Reverse")) {
 			// the reverse button was pressed
 			String orgStr = jtf.getText();
-			String resStr = "";
+			StringBuffer resStr = new StringBuffer("");
+			String finStr;
 			
 			// reverse the string in the text field
 			for (int i = orgStr.length()-1; i >= 0; i--) {
-				resStr +=orgStr.charAt(i);
+				resStr.append(orgStr.charAt(i));
 			}
-			
+			finStr = resStr.toString();
 			// store the reverse string in the text field
-			jtf.setText(resStr);
+			jtf.setText(finStr);
 		} else 
 			// Enter was pressed when focus was in text file
 			jlabContents.setText("You pressed ENTER. Text is: " + jtf.getText());
