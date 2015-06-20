@@ -9,7 +9,7 @@ import javax.swing.*;
 public class Calculator implements ItemListener, ActionListener{
 
 	char buttonsLabels[] = {'7', '8', '9', '/', 'C', '4', '5', '6', '*', '(',
-			'1', '2', '3', '-', ')', '0', '.', '%', '+', '=' };
+			'1', '2', '3', '-', ')', '0', '.', '^', '+', '=' };
 	StringBuffer mathFormula = new StringBuffer("");
 	
 	public Calculator() {
