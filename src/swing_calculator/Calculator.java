@@ -11,6 +11,7 @@ public class Calculator implements ItemListener, ActionListener{
 	char buttonsLabels[] = {'7', '8', '9', '/', 'C', '4', '5', '6', '*', '(',
 			'1', '2', '3', '-', ')', '0', '.', '^', '+', '=' };
 	StringBuffer mathFormula = new StringBuffer("");
+	JTextField displayField;
 	
 	public Calculator() {
 
@@ -21,7 +22,7 @@ public class Calculator implements ItemListener, ActionListener{
 		mainPane.setLayout(new BoxLayout(mainPane, BoxLayout.Y_AXIS));
 		
 
-		JTextField displayField = new JTextField();
+		displayField = new JTextField();
 		Font font1 = new Font("SansSerif", Font.PLAIN, 20);
 		displayField.setFont(font1);
 		
